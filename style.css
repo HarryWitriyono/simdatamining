@@ -1,0 +1,194 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serief;background-color:#ffffff;
+}
+
+.login {
+	background:url(images/bg2.jpeg);
+	background-size:strech;
+	color:#ffffff;
+}
+.biasa {
+	background-color:#000000;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#dropdown {
+  float: left;
+  overflow: hidden;
+}
+#dropdown #dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+#navbar a:hover, #dropdown:hover #dropbtn {
+  background-color: red;
+}
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+#dropdown:hover #dropdown-content {
+  display: block;opacity:0.9;
+}
+#dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+#dropdown-content a:hover {
+  background-color: #ddd;
+}
+#header {background-color:blue;height:90px;width:100%;color:white;font-size:38px;text-align:center;
+         padding-top:10px;border-radius:10px 10px 0 0;
+  }
+#content{height:60%;
+}
+#footer{background-color:lightblue;border-radius:0 0 10px 10px;text-align:center;}
+#menupengguna:hover a { color: white;background-color:red; }
+#menupengguna{
+    float: right;
+	padding: 10px 20px;
+	background:blue;
+	border-radius: 5px;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+	z-index: 99;
+}
+#menupengguna a{text-decoration:none;color: red;}
+
+.boxerror{
+	position:absolute;
+	top:15%;
+	left:20%;
+	transform:translate(-10%,-50%);
+	width:80%;
+	padding:40px;
+	background:rgb(0,0,0,.8);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0,0,0,.5);
+	border-radius:10px;
+}
+.boxerror h2{
+	margin:0 0 30px;
+	padding:0;
+	color:red;
+	text-align:center;
+}
+.boxerror .message{font-size:28px;color:yellow;text-align:center;
+}
+.box{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:400px;
+	padding:40px;
+	background:rgb(0,0,0,.8);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0,0,0,.5);
+	border-radius:10px;
+}
+.box h2{
+	margin:0 0 30px;
+	padding:0;
+	color:#fff;
+	text-align:center;
+}
+.box .inputBox {
+	position:relative;
+}
+.box .inputBox input {
+	width:100%;
+	padding:10px 0;
+	font-size:16px;
+	color:#fff;
+	letter-spacing:1px;
+	margin-bottom:30px;
+	border:none;
+	border-bottom:1px solid #fff;
+	outline:none;
+	background:transparent;
+}
+.box .inputBox label {
+	position:absolute;
+	top:0;
+	left:0;
+	padding:10px 0;
+	font-size:16px;
+	color:#fff;
+	letter-spacing:1px;
+	pointer-events:none;
+	transition:5s;
+}
+.box .selectBox {
+	position:relative;
+	font-size:16px;
+	margin-bottom:80px;
+	padding-bottom:20px;
+}
+.box .selectBox label{
+	position:absolute;color:white;
+	font-size:18px;
+	margin-bottom:80px;
+	padding-bottom:20px;
+}
+.box .selectBox select{
+	position:absolute;
+	font-size:18px;
+	margin-bottom:50px;
+	padding:20px 20px;
+}
+.box .selectBox option {
+	position:absolute;
+	font-size:18px;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+	top:-18px;
+	left:0;
+	color:#03a9f4;
+	font-size:12px;
+}
+.box input[type="submit"]
+{
+	background:transparent;
+	border:none;
+	outline:none;
+	color:#fff;
+	background:#03a9f4;
+	padding:10px 20px;
+	cursor:pointer;
+	border-radius:5px;
+}
+.tombol {border:none;
+    font-size:48px;padding:10px 20px;width:300px;background-color:red;
+}
