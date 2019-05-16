@@ -7,6 +7,36 @@ class operasidb {
 		$db = new koneksidb();
 		$this->koneksi = $db->connect();
 	} // end if function __construct
+	function tambahPenilaian($idsubkriteria,$idresponden){
+		$kodesql = $this->koneksi->prepare("insert into penilaian (Idsubkriteria,idresponden) values (?,?)");
+		$kodesql->bind_param("ii",$idsubkriteria,$idresponden);
+		$q=$kodesql->execute();
+		if ($q) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function tambahSubKriteria($idkriteria,$namasubkriteria){
+		$kodesql = $this->koneksi->prepare("insert into subkriteria (Idkriteria,Namasubkriteria) values (?,?)");
+		$kodesql->bind_param("is",$idkriteria,$namasubkriteria);
+		$q=$kodesql->execute();
+		if ($q) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function tambahKriteria($namakriteria){
+		$kodesql = $this->koneksi->prepare("insert into kriteria (Namakriteria) values (?)");
+		$kodesql->bind_param("s",$namakriteria);
+		$q=$kodesql->execute();
+		if ($q) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	function tambahPengguna($username,$password,$level) {
 		$kodesql = $this->koneksi->prepare("insert into pengguna (username,password,level) values (?,?,?)");
 		$kodesql->bind_param("ssi",$username,$password,$level);
